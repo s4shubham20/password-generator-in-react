@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import { NP, UP, LP, SP } from './Data/passcare';
@@ -12,7 +11,7 @@ function App() {
   let [passwordLen, setPasswordLen]   = useState(10); 
 
   useEffect(() => {
-    // console.log(numberCase);
+    // console.log(generatePassword);
   })
 
   const generatePasswordHandler = () => {
@@ -34,15 +33,20 @@ function App() {
   }
 
   const copyPassHandler = (evt) => {
-   navigator.clipboard.writeText(generatePassword);
-   evt.target.innerText = "Copied";
+    if(generatePassword != ""){
+      navigator.clipboard.writeText(generatePassword);
+      evt.target.innerText = "Copied";
+      setTimeout(() => {
+        evt.target.innerText = "Copy";
+      }, 5000);
+    }
   }
   return (
    <>
       <div className="password-generator">
         <h2>Password Generator</h2>
         <div className="password-box">
-          <input type="text" name="password" value={generatePassword} placeholder="Generate Password"/>
+          <input type="text" name="password" value={generatePassword} onChange={(evt) => setGeneratePassword(evt.target.value)} placeholder="Generate Password"/>
           <button onClick={copyPassHandler}>Copy</button>
         </div>
         <div className="password-length">
