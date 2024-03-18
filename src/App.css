@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(211, 184, 236);
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.password-generator{
+    background-color: blueviolet;
+    padding: 2rem 1rem;
+    width: 25rem;
+    box-shadow: 0px 0px 10px 3px rgb(233, 175, 236);
+    border-radius: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.password-box{
+    margin: 1rem 0rem;
+    display: flex;
+    justify-self: center;
+    width: 100%;
+    position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.password-box input{
+    width: 100%;
+    padding: 0.9rem;
+    outline: none;
+    border: none;
+    border-radius: 0.25rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.password-box button{
+    position: absolute;
+    right: 1rem;
+    top: 0.4rem;
+    height: 2rem;
+    width: 4.5rem;
+    cursor: pointer;
+    background-color: #256e2b;
+    border-radius: 0.25rem;
+    border: none;
+    color: white;
+}
+
+.password-length{
+    margin: 0.8rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.password-length p{
+    flex-basis: 90%;
+}
+.password-length input{
+    padding: 0.5rem;
+    flex-basis: 10%;
+    outline: none;
+    border-radius: 0.25rem;
+    border: none;
+    width: 4rem;
+}
+
+.password-length input[type="checkbox"]{
+    transform: scale(2.0);
+    color: #256e2b;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+}
+
+.btn{
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: #256e2b;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 1rem 0rem;
+    cursor: pointer
 }
